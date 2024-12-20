@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle, #2e3192, #1b1464);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.app {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f9a826;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.game-over {
+  margin-top: 20px;
+}
+
+.restart-btn {
+  background: linear-gradient(135deg, #f9a826, #ff5733);
+  color: #1b1464;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.restart-btn:hover {
+  background: linear-gradient(135deg, #ff5733, #f9a826);
+  transform: scale(1.1);
+}
+
+.restart-btn:active {
+  transform: scale(0.95);
+}
+
+select {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  background-color: #1b1464;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover {
+  background-color: #f9a826;
+  color: #1b1464;
+}
+
+select:focus {
+  outline: none;
+  border-color: #f9a826;
+}
+
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation: pop 0.5s ease forwards;
+}
+
+.shape:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.6);
+}
+
+.shape:active {
+  transform: scale(0.8);
+  opacity: 0.6;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.scoreboard p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.scoreboard label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #f9a826;
+}
+
+
+
+.timer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 15px auto;
+  background: linear-gradient(135deg, #ff5733, #f9a826);
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(255, 87, 51, 0.5);
+  color: #1b1464;
+  text-transform: uppercase;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 4px 15px rgba(255, 87, 51, 0.4);
+  }
+  to {
+    box-shadow: 0 6px 25px rgba(249, 168, 38, 0.6);
+  }
+}
